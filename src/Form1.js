@@ -38,6 +38,22 @@ export const Form1 = () => (
                     <select id="inputState" class="form-control">
                         <option selected>Выбрать</option>
                         <option>Предзаказ Iphone 15 Pro</option>
+                        <option>Телефон Xiaomi 13 lite</option>
+                        <option>Телефон Xiaomi 10s</option>
+                        <option>Телефон Redmi not 12 pro+</option>
+                        <option>Телефон Xiaomi 12 Ultra</option>
+                        <option>Ноутбук Asus Predator 300</option>
+                        <option>Ноутбук HP-Spectre</option>
+                        <option>Ноутбук HP Ultimate Edition+</option>
+                        <option>Ноутбук MacBook Pro</option>
+                        <option>Телевизор Econ EX-32HS019B</option>
+                        <option>Телевизор Samsung Neo 2</option>
+                        <option>Телевизор Novex NWX-75U011MSG</option>
+                        <option>Телевизор Misura t9</option>
+                        <option>Игровая приставка Playstation 5</option>
+                        <option>Игровая приставка  Xbox one s</option>
+                        <option>Игровая приставка  Nintendo Switch</option>
+                        <option>Игровая приставка  Steam Deck</option>
                     </select>
                 </div>
 

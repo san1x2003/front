@@ -1,8 +1,7 @@
-import React, {Component} from "react";
+import React  from "react";
 import CarouselBox from '../Components/CarouselBox';
 import { Link } from 'react-router-dom';
-import Carousel from 'react-bootstrap/Carousel';
-import { Container,Tab,Nav,Row,Col, Card, Button } from "react-bootstrap";
+import { Container,Nav,Row,Col, Card, Button } from "react-bootstrap";
 
 
 
@@ -14,10 +13,10 @@ export const Home = () => {
    <Nav>
      <CarouselBox/>
 
-        <Container style={{ paddingTop: '2rem', paddingBottom: '2rem' }}  >
+        <Container style={{ paddingTop: '5rem', paddingBottom: '5rem' }}  >
             <Row>
                 <Col>
-                    <Card style={{ width: '22rem' }}>
+                    <Card style={{ width: '24rem' }}>
                         <Card.Img variant="top" src='https://akket.com/wp-content/uploads/2020/11/Sony-PlayStation-5-Pro-0.jpg' alt="Ps5" />
                         <Card.Body>
                             <Card.Title> Розыгрыш Sony PlayStation 5 </Card.Title>
@@ -51,7 +50,7 @@ export const Home = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card style={{ width: '23rem' }}>
+                    <Card style={{ width: '25rem' }}>
                         <Card.Img  variant="top" src='https://i.ytimg.com/vi/Kacu1YFHYSI/maxresdefault.jpg' />
                         <Card.Body>
                             <Card.Title> Предзаказ нового Iphone 15 pro </Card.Title>

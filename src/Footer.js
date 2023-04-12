@@ -10,7 +10,7 @@ const Styles = Styled.div`
 const Footer = () => (
     <div className="footer">
         <Styles>
-            <footer fluid style={{ backgroundColor: '#282828', color: '#b0b7c6' }}>
+            <footer fluid style={{ backgroundColor: '#282828', color: '#b0b7c6', marginTop: '50px' }}>
                 <div className="container-fluid text-center text-md-left">
                     <div className="row">
                         <div className="col-md-6 mt-md-0 mt-3">
