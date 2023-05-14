@@ -1,38 +1,59 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { UseFrom } from 'react-hook-form';
-import { Button, Modal, Form, input } from 'react-bootstrap';
+import { Button,Form } from 'react-bootstrap';
 
 
-export const Form1 = () => (
+export class Form1 extends Component {
     
+static displayName = Form1.name;
+
+    constructor(props){
+
+        super(props);
+        this.state = {
+            email :'',
+            phone : '',
+            adress:''
+
+        }
+
+       
+        this.onInputChange = this.onInputChange.bind(this);
+        this.sendClientData = this.sendClientData.bind(this);
+
+    }
+
+    onInputChange(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        });
+    }
     
-    <>
+    render() {
+
+        return (
  
-        <h1 style ={{padding:'10px'}}>Форма для заполнения</h1>
+        <><h1 style ={{padding:'10px'}}>Форма для заполнения</h1>
      
         <Form style ={{padding:'10px'}}>
             
 
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputName">ФИО</label>
-                    <input type="Name" class="form-control" id="inputFIO" placeholder="" />
+                    <label for="inputName">Почта</label>
+                    <input type="Text" name="email" class="form-control" id="inputFIO" placeholder="" />
                     
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Телефон</label>
-                    <input class="form-control" id="inputPhone" />
+                    <input name="phone" class="form-control" id="inputPhone" />
                 </div>
             </div>
             <div class="form-group col-md-6">
                 <label for="inputAddress">Адрес</label>
-                <input type="text" class="form-control" id="inputAddress"  />
+                <input type="text" name="adress" class="form-control" id="inputAddress"  />
             </div>
             <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputCity">ИНН</label>
-                    <input type="text" class="form-control" id="inputINN" />
-                </div>
                 <div class="form-group col-md-4">
                     <label for="inputProduct">Продукт</label>
                     <select id="inputState" class="form-control">
@@ -63,9 +84,31 @@ export const Form1 = () => (
             <button  type="submit" class="f-button f-button - warning" >Продолжить</button>
 
         </Form>
+        </>
 
+        );
+    }  
+    
+    async sendClientData() {
+        let client = {
+            "Email": this.state.email,
+            "PhoneNumber": this.state.phone,
+            "Address": this.state.adress
+        };
+        console.log(client);
+
+        const reponse = await fetch('https://localhost:7166/client/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                
+            },
+            body: JSON.stringify(client)
+        });
+
+        const data = await reponse.json();
+        console.log(data);
         
+ }  
 
-    </>
-)
-export default Form1;
+}
